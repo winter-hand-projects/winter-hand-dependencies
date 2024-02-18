@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>org.winter</groupId>
+    <artifactId>winter-hand-dependencies</artifactId>
+    <version>1.0</version>
+    <packaging>pom</packaging>
+    <name>winter-hand-dependencies</name>
+    <description>winter Dependencies</description>
+    <url>https://winter.io/projects/winter</url>
+    <licenses>
+        <license>
+            <name>Apache License, Version 2.0</name>
+            <url>https://www.apache.org/licenses/LICENSE-2.0</url>
+        </license>
+    </licenses>
+    <developers>
+        <developer>
+            <name>winter</name>
+            <email>mptao2015@163.com</email>
+            <organization>Winter Hand, Inc.</organization>
+            <organizationUrl>https://www.winter.io</organizationUrl>
+        </developer>
+    </developers>
+    <scm>
+        <url>https://github.com/winter-hand-projects/winter</url>
+    </scm>
+    <properties>
+
+    </properties>
+    <dependencyManagement>
+        <dependencies>
+
+        </dependencies>
+    </dependencyManagement>
+
+    <build>
+        <pluginManagement>
+            <plugins>
+            </plugins>
+        </pluginManagement>
+    </build>
+</project>
