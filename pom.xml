@@ -20,7 +20,7 @@
     <developers>
         <developer>
             <name>winter</name>
-            <email>mptao2015@163.com</email>
+            <email>taomingpengdaywork@163.com</email>
             <organization>Winter Hand, Inc.</organization>
             <organizationUrl>https://www.winter.io</organizationUrl>
         </developer>
@@ -29,18 +29,65 @@
         <url>https://github.com/winter-hand-projects/winter</url>
     </scm>
     <properties>
-
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
     <dependencyManagement>
         <dependencies>
-
         </dependencies>
     </dependencyManagement>
-
     <build>
         <pluginManagement>
             <plugins>
             </plugins>
         </pluginManagement>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-deploy-plugin</artifactId>
+                <version>3.0.0-M1</version>
+                <configuration>
+                    <!--<updateReleaseInfo>true</updateReleaseInfo>-->
+                </configuration>
+            </plugin>
+            <!-- Maven Site 插件配置 -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-site-plugin</artifactId>
+                <version>3.12.1</version>
+            </plugin>
+            <!-- 明确指定 maven-project-info-reports-plugin 版本 -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-project-info-reports-plugin</artifactId>
+                <version>3.1.0</version>
+            </plugin>
+        </plugins>
     </build>
+    <!-- 本地nexus私有库-->
+    <distributionManagement>
+        <snapshotRepository>
+            <id>common-nexus-snapshots</id>
+            <name>snapshots</name>
+            <url>http://192.168.3.15:8081/repository/maven-snapshots/</url>
+        </snapshotRepository>
+        <repository>
+            <id>common-nexus-releases</id>
+            <name>release</name>
+            <url>http://192.168.3.15:8081/repository/maven-releases/</url>
+        </repository>
+    </distributionManagement>
+
+    <!--获取公共的Maven依赖库-->
+    <repositories>
+        <repository>
+            <id>nexus</id>
+            <url>http://192.168.3.15:8081/repository/maven-public/</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
 </project>
